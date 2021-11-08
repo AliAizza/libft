@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaizza <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 07:48:04 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/07 09:32:34 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/08 11:25:45 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static char    *ft_strdup1(char    *s, char    c)
         i++;
     str = malloc((i + 1) * sizeof(char));
     i = 0;
-    while (!ft_issep(s[i], c))
+    while (s[i] && !ft_issep(s[i], c))
     {
         str[i] = s[i];
         i++;
@@ -83,14 +83,14 @@ char    **ft_split(char    const    *s, char    c)
 
 int main()
 {
-    char *a = "sabcsdefsghis";
+    char *a = "    aa aa a a a    a a a a aaaa       a    aa  aa a     a aa         ";
     char **b;
     int i;
-    b = ft_split(a, 's');
+    b = ft_split(a, ' ');
     i = 0;
     while (b[i])
     {
-        printf("%s", b[i]);
+        printf("%s\n", b[i]);
         i++;
-    }
+	}
 }

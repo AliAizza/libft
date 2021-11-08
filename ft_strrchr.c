@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 09:53:57 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/07 21:10:22 by aaizza           ###   ########.fr       */
+/*   Created: 2021/11/07 21:39:14 by aaizza            #+#    #+#             */
+/*   Updated: 2021/11/07 21:39:30 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-char	*ft_strdup(const char *s1)
+#include "libft.h"
+
+char	*ft_strrchr(const char *str, int c)
 {
 	int		i;
-	char	*c;
-	char	*s;
+	char	*new;
 
-	i = 0;
-	s = (char *)s1;
-	while (s[i])
-		i++;
-	c = malloc((i + 1) * sizeof(char));
-	i = 0;
-	while (s[i])
+	new = (char *)str;
+	if (c == 0)
+		return (new + ft_strlen(new));
+	i = ft_strlen(new);
+	while (i >= 0)
 	{
-		c[i] = s[i];
-		i++;
+		if (new[i] == (unsigned char)c)
+			return (&new[i]);
+		i--;
 	}
-	c[i] = '\0';
-	return (c);
+	return (0);
 }

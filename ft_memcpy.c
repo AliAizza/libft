@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 09:53:57 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/07 21:10:22 by aaizza           ###   ########.fr       */
+/*   Created: 2021/11/07 21:34:07 by aaizza            #+#    #+#             */
+/*   Updated: 2021/11/07 21:34:18 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-char	*ft_strdup(const char *s1)
-{
-	int		i;
-	char	*c;
-	char	*s;
+#include "libft.h"
 
+void	*ft_memcpy(void *s1, const void *s2, size_t n)
+{
+	size_t		i;
+	char		*destcpy;
+	const char	*srccpy;
+
+	destcpy = (char *)s1;
+	srccpy = (const char *)s2;
+	if (srccpy == destcpy)
+		return ((char *)srccpy);
 	i = 0;
-	s = (char *)s1;
-	while (s[i])
-		i++;
-	c = malloc((i + 1) * sizeof(char));
-	i = 0;
-	while (s[i])
+	while (i < n)
 	{
-		c[i] = s[i];
+		destcpy[i] = srccpy[i];
 		i++;
 	}
-	c[i] = '\0';
-	return (c);
+	return (s1);
 }

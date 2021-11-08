@@ -6,44 +6,47 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:19:45 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/07 21:48:27 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/08 12:51:03 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isset(char c, const char *str)
+static int	ft_isset(char c, const char *str)
 {
-	int i;
+	int	i;
+
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
-		if(str[i] == c)
-			return(1);
+		if (str[i] == c)
+			return (1);
 		i++;
 	}
 	return (0);
 }
-char *ft_strtrim(char const *s1, char const *set)
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int i;
-	int j;
-	char *a;
-	
+	char	*a;
+	char	*s;
+	int		i;
+	int		j;
+
+	a = (char *)s1;
 	i = 0;
-	while (s1[i] && ft_isset(s1[i],set))
+	while (a[i] && ft_isset(a[i], set))
 		i++;
-	s1 += i;
-	i = ft_strlen(s1) - 1;
-	while (s1[i] && ft_isset(s1[i],set))
-		i--;
-	a = malloc(sizeof(char) * i + 1);
-	j = 0;
-	while (s1[j] && i >= 0)
+	a += i;
+	j = ft_strlen(a) - 1;
+	while (a[j] && ft_isset(a[j], set))
+		j--;
+	s = malloc((j + 1) * sizeof(char));
+	i = 0;
+	while (a[i] && j > 0)
 	{
-		a[j] = s1[j];
-		j++;
-		i--;		
+		s[j] = a[j];
+		j--;
 	}
-	a[j] = 0;
-	return (a);
-} 
+	s[i] = '\0';
+	return (s);
+}

@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:40:01 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/07 21:40:14 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/08 12:19:46 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,28 @@
 #include <stdlib.h>
 char	*ft_strjoin(const char *s1, const char *s2)
 {
+	char	*a;
+	char	*b;
+	char	*s;
 	int		i;
-	int	 j;
-	int		s1len;
-	int		s2len;
-	int	 len;
-	char	*str;
-	
-	s1len = ft_strlen((char*) s1);
-	s2len = ft_strlen((char*) s2);
-	len = s1len + s2len;
-	str = malloc(sizeof(char) * len + 1);
-	if (str == NULL)
+	int		j;
+
+	a = (char *)s1;
+	b = (char *)s2;
+	i = ft_strlen(a);
+	j = ft_strlen(b);
+	s = malloc((i + j + 1) * sizeof(char));
+	if (!s)
 		return (NULL);
 	i = 0;
-	while (i < s1len)
-	{
-		str[i] = s1[i];
-		i++;
-	}
 	j = 0;
-	while (i < len)
+	while (a[i])
 	{
-		str[i] = s2[j];
+		s[i] = a[i];
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	while (b[j])
+		s[i++] = b[j++];
+	s[i] = '\0';
+	return (s);
 }

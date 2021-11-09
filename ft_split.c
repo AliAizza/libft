@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 07:48:04 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/09 10:47:53 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/09 13:33:03 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char    **ft_split(char    const    *s, char    c)
     t[j] = 0;
     return (t);
 }
-int main()
+/*int main()
 {
     char **b = ft_split("		olol", '\t');
     int i;
@@ -96,4 +96,4 @@ int main()
         printf("%s\n", b[i]);
         i++;
 	}
-}
+}*/

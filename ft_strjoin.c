@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:40:01 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/08 12:19:46 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/09 10:45:48 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	int		i;
 	int		j;
 
+	if (!s1 || !s2)
+		return (NULL);
 	a = (char *)s1;
 	b = (char *)s2;
 	i = ft_strlen(a);
@@ -39,3 +41,12 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	s[i] = '\0';
 	return (s);
 }
+
+/*#include<string.h>
+int main()
+{
+    char *a = "abc";
+	char *b = NULL;
+	printf("%s",ft_strjoin(a, b));
+    return 0;
+}*/

@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:19:45 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/08 12:51:03 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/09 10:57:25 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,25 +28,19 @@ static int	ft_isset(char c, const char *str)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*a;
-	char	*s;
 	int		i;
 	int		j;
 
+	if (!s1)
+		return (NULL);
 	a = (char *)s1;
 	i = 0;
+	if (!set)
+		return (a);
 	while (a[i] && ft_isset(a[i], set))
 		i++;
-	a += i;
 	j = ft_strlen(a) - 1;
-	while (a[j] && ft_isset(a[j], set))
+	while (j > 0 && ft_isset(a[j], set))
 		j--;
-	s = malloc((j + 1) * sizeof(char));
-	i = 0;
-	while (a[i] && j > 0)
-	{
-		s[j] = a[j];
-		j--;
-	}
-	s[i] = '\0';
-	return (s);
+	return (ft_substr(a, i, j - i + 1));
 }

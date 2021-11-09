@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 07:48:04 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/08 12:08:17 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/09 10:47:53 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ static char    *ft_strdup1(char    *s, char    c)
     while (s[i] && !ft_issep(s[i], c))
         i++;
     str = malloc((i + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
     i = 0;
     while (s[i] && !ft_issep(s[i], c))
     {
@@ -60,9 +62,13 @@ char    **ft_split(char    const    *s, char    c)
     char    *g;
     char    **t;
 
+    if (!s)
+        return (NULL);
     g = (char *)s;
     i = ft_count(g, c);
     t = malloc((i + 1) * sizeof(char *));
+	if (!t)
+		return (NULL);
     i = 0;
     j = 0;
     while (g[i])
@@ -70,27 +76,24 @@ char    **ft_split(char    const    *s, char    c)
         while (g[i] && ft_issep(g[i], c))
             i++;
         if (g[i] && !ft_issep(g[i], c))
-        {
-            t[j] = ft_strdup1(g + i, c);
-            j++;
-        }
+		{
+			t[j] = ft_strdup1(g + i, c);
+        	j++;
+		}
         while (g[i] && !ft_issep(g[i], c))
             i++;
     }
     t[j] = 0;
     return (t);
 }
-
-/*int main()
+int main()
 {
-    char *a = "    aa aa a a a    a a a a aaaa       a    aa  aa a     a aa         ";
-    char **b;
+    char **b = ft_split("		olol", '\t');
     int i;
-    b = ft_split(a, ' ');
     i = 0;
-    while (b[i])
+    while (i < 1)
     {
         printf("%s\n", b[i]);
         i++;
 	}
-}*/
+}

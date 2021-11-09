@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:43:43 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/08 12:03:00 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/09 10:31:31 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*a;
 	char	*sub;
 
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		len = 0;
 	a = (char *)s;
 	i = 0;
 	j = 0;
@@ -36,8 +40,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
-int main()
+/*int main()
 {
     char *a = "2";
     printf("%s", ft_substr(a, 6, 2));
-}
+}*/

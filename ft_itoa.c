@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 09:32:42 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/07 21:02:23 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/08 17:42:44 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ static char	*ft_convert(long int nb, int size, int sign)
 	char	*a;
 
 	a = malloc((size + 1) * sizeof(char));
-	a[size + 1] = '\0';
+	if (!a)
+		return (NULL);
+	a[size] = '\0';
+	size--;
 	while (size >= 0)
 	{
 		a[size] = (nb % 10) + '0';
@@ -51,14 +54,14 @@ char	*ft_itoa(int n)
 	}
 	while (nb > 0)
 	{
-		nb /= 10;
 		size++;
+		nb /= 10;
 	}
-	str = ft_convert(nbr, size - 1, sign);
+	str = ft_convert(nbr, size, sign);
 	return (str);
 }
 
 /*int main()
 {
-	printf("%s", ft_itoa(0));
+	printf("%s", ft_itoa(-5859));
 }*/

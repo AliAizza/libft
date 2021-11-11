@@ -6,12 +6,13 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 09:32:42 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/11 00:30:30 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/11 04:33:23 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-static char	*ft_convert(long int nb, int size, int sign)
+
+char	*ft_convert(long int nb, int size, int sign)
 {
 	char	*a;
 
@@ -37,7 +38,6 @@ char	*ft_itoa(int n)
 	int			sign;
 	int			size;
 	long int	nbr;
-	char		*str;
 
 	sign = 1;
 	size = 0;
@@ -57,8 +57,7 @@ char	*ft_itoa(int n)
 		size++;
 		nb /= 10;
 	}
-	str = ft_convert(nbr, size, sign);
-	return (str);
+	return (ft_convert(nbr, size, sign));
 }
 
 /*int main()

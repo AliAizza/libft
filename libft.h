@@ -6,15 +6,15 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 09:34:51 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/10 23:41:55 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/11 18:59:19 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-#include<stdio.h>
-#include<stdlib.h>
-#include<unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 int     ft_isalpha(int c);
 int     ft_isdigit(int c);
 int     ft_isalnum(int c);

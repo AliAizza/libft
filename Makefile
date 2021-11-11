@@ -6,7 +6,7 @@
 #    By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/07 10:07:42 by aaizza            #+#    #+#              #
-#    Updated: 2021/11/10 23:40:45 by aaizza           ###   ########.fr        #
+#    Updated: 2021/11/11 18:26:28 by aaizza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ all:		${NAME}
 
 ${NAME}:
 			${CC} ${FLAGS} -c ${SRC}
-			ar -rcs ${NAME} ${OBJS}
+			ar -rc ${NAME} ${OBJS}
 
 clean:
 			rm -f ${OBJS}

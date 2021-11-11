@@ -6,11 +6,11 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:42:16 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/07 21:42:31 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/11 18:56:40 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

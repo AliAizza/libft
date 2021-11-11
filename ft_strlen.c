@@ -6,18 +6,18 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:19:08 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/07 21:19:25 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/11 18:55:52 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
- size_t  i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
-	 i++;
+		i++;
 	return (i);
 }

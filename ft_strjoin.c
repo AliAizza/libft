@@ -6,12 +6,12 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:40:01 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/10 18:27:37 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/11 18:54:35 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
+
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*a;

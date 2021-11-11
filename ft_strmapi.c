@@ -6,12 +6,13 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 11:05:20 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/09 11:21:40 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/11 18:56:24 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*a;
 	char	*s1;

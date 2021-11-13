@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 21:13:18 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/13 18:12:29 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/13 22:28:28 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_lstnew(void *content)
 	return (new);
 }
 
-// int main()
-// {
-// 	printf("%s", ft_lstnew("test")->content);
-// }
+/*int main()
+{
+	printf("%s", ft_lstnew("test")->content);
+}*/

@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 03:23:23 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/13 18:15:11 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/13 22:28:07 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-// int main()
-// {
-// 	t_list *a = ft_lstnew("1");
-// 	a->next = ft_lstnew("2");
-// 	ft_lstadd_front(&a, ft_lstnew("0"));
-// 	ft_lstadd_front(&a, ft_lstnew("-1"));
-// 	printf("%s", ft_lstlast(a)->content);
-// }
+/*int main()
+{
+	t_list *a = ft_lstnew("1");
+	a->next = ft_lstnew("2");
+	ft_lstadd_front(&a, ft_lstnew("0"));
+	ft_lstadd_front(&a, ft_lstnew("-1"));
+	printf("%s", ft_lstlast(a)->content);
+}*/

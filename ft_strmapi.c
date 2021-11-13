@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 11:05:20 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/12 01:33:59 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/13 22:09:26 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*s1;
 	int		i;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	i = ft_strlen(s);
 	a = malloc (i + 1);

@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:19:45 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/13 20:25:57 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/13 22:09:39 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		j;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	a = (char *)s1;
 	i = 0;

@@ -1,19 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 21:44:12 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/12 01:15:32 by aaizza           ###   ########.fr       */
+/*   Created: 2021/11/12 03:24:34 by aaizza            #+#    #+#             */
+/*   Updated: 2021/11/13 18:50:28 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+void ft_del(void *a)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	else
-		return (c);
+	int *i;
+	i = (int *)a;
+	*i = 0;
+}
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (lst && del)
+	{
+		del(lst->content);
+		free(lst);
+	}
+}
+
+#include <stdio.h>
+int main()
+{
+	int b = 99;
+	t_list *a = ft_lstnew(&b);
+	printf ("%d\n", *(int *)a->content);
+	ft_lstdelone(a, ft_del);
+	printf ("%d", *(int *)a->content);
 }

@@ -6,11 +6,12 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:40:38 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/11 18:55:01 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/12 01:28:11 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	src_len;

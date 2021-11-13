@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 11:27:28 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/11 18:54:03 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/12 01:26:05 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int	i;
 
 	if (!s)
-		return;
+		return ;
 	i = 0;
 	while (s[i])
 	{

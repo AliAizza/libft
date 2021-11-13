@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:40:01 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/11 18:54:35 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/12 01:27:48 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,10 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	s = malloc((i + j + 1) * sizeof(char));
 	if (!s)
 		return (NULL);
-	i = 0;
+	i = -1;
 	j = 0;
-	while (a[i])
-	{
+	while (a[++i])
 		s[i] = a[i];
-		i++;
-	}
 	while (b[j])
 		s[i++] = b[j++];
 	s[i] = '\0';

@@ -1,19 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 21:44:12 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/12 01:15:32 by aaizza           ###   ########.fr       */
+/*   Created: 2021/11/12 03:23:23 by aaizza            #+#    #+#             */
+/*   Updated: 2021/11/13 18:15:11 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	else
-		return (c);
+	while (lst)
+	{
+		if (!lst->next)
+			return (lst);
+		lst = lst->next;
+	}
+	return (lst);
 }
+
+// int main()
+// {
+// 	t_list *a = ft_lstnew("1");
+// 	a->next = ft_lstnew("2");
+// 	ft_lstadd_front(&a, ft_lstnew("0"));
+// 	ft_lstadd_front(&a, ft_lstnew("-1"));
+// 	printf("%s", ft_lstlast(a)->content);
+// }

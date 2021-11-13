@@ -6,11 +6,12 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:19:45 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/11 18:58:16 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/13 20:25:57 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static int	ft_isset(char c, const char *str)
 {
 	int	i;

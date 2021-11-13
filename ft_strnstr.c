@@ -6,11 +6,12 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:42:58 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/11 18:57:18 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/12 01:28:19 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 {
 	size_t	i;

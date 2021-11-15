@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 09:34:51 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/14 16:51:03 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/15 20:23:44 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strdup(const char *str);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
-char	*ft_strnstr(const char *str1, const char *str2, size_t len);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);

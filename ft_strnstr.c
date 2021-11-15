@@ -6,21 +6,21 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:42:58 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/12 01:28:19 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/15 20:36:43 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str1, const char *str2, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
 	char	*s1;
 	char	*s2;
 
-	s1 = (char *) str1;
-	s2 = (char *) str2;
+	s1 = (char *)haystack;
+	s2 = (char *)needle;
 	i = 0;
 	if (s2[0] == '\0')
 		return (s1);
@@ -37,10 +37,3 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 	}
 	return (0);
 }
-
-/*int main()
-{
-	char a[] = "123456testldsknvl";
-	char b[] = "test";
-	printf("%s", ft_strnstr(a, b, 10));
-}*/

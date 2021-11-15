@@ -5,105 +5,93 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 07:48:04 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/15 05:08:31 by aaizza           ###   ########.fr       */
+/*   Created: 2021/11/15 16:59:47 by aaizza            #+#    #+#             */
+/*   Updated: 2021/11/15 20:18:24 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_issep(char i, char c)
+static int	ft_issep(char i, char c)
 {
 	if (i == c)
 		return (1);
 	return (0);
 }
 
-int	ft_count(char *s, char c)
+static int	ft_count(char const *s, char c)
 {
 	int	i;
 	int	count;
 
-	i = 0;
 	count = 0;
+	i = 0;
+	if (!ft_issep(s[0], c))
+		count++;
 	while (s[i])
 	{
-		if (!ft_issep(s[i], c) && (ft_issep(s[i - 1], c) || !s[i - 1]))
+		if (ft_issep(s[i], c)
+			&& !ft_issep(s[i + 1], c) && s[i + 1])
 			count++;
 		i++;
 	}
 	return (count);
 }
 
-char	*ft_strdup1(char *s, char c)
+static int	ft_wordlen(char const *s, char c)
+{
+	int	i;
+
+	i = 0;
+	while (!ft_issep(s[i], c) && s[i])
+		i++;
+	return (i);
+}
+
+static char	*ft_put(char const *s, char sep)
 {
 	int		i;
+	int		j;
 	char	*str;
 
 	i = 0;
-	while (s[i] && !ft_issep(s[i], c))
-		i++;
-	str = malloc((i + 1) * sizeof(char));
-	if (!str)
+	j = ft_wordlen(s, sep);
+	str = malloc((j + 1) * sizeof(char));
+	if (!s)
 		return (NULL);
-	i = 0;
-	while (s[i] && !ft_issep(s[i], c))
+	while (s[i] && j > 0)
 	{
-		str[i] = s[i];
+		str[i] = (char)s[i];
 		i++;
+		j--;
 	}
 	str[i] = '\0';
 	return (str);
 }
 
-char	**ft_norminette25(char **t, char *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	j;
+	char		**new;
+	int			i;
+	int			j;
 
+	if (!s)
+		return (NULL);
+	new = malloc(sizeof(char *) * ((ft_count(s, c)) + 1));
+	if (!new)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
 	{
-		while (s[i] && ft_issep(s[i], c))
+		while (ft_issep(s[i], c) && s[i])
 			i++;
-		if (s[i] && !ft_issep(s[i], c))
+		if (!ft_issep(s[i], c) && s[i])
 		{
-			t[j] = ft_strdup1(s + i, c);
-			j++;
+			new[j++] = ft_put(s + i, c);
+			i += ft_wordlen(s + i, c);
 		}
-		while (s[i] && !ft_issep(s[i], c))
-			i++;
 	}
-	t[j] = 0;
-	return (t);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	int		i;
-	char	*g;
-	char	**t;
-
-	if (!s)
-		return (NULL);
-	g = (char *)s;
-	i = ft_count(g, c);
-	t = malloc((i + 1) * sizeof(char *));
-	if (!t)
-		return (NULL);
-	return (ft_norminette25(t, g, c));
-}
-
-#include<stdio.h>
-int main()
-{
-    char **b = ft_split("a b c d e f g h i j k ", ' ');
-    int i;
-    i = 0;
-    while (b[i])
-    {
-        printf("%s\n", b[i]);
-        i++;
-	}
+	new[j] = NULL;
+	return (new);
 }

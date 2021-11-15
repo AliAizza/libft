@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 07:48:04 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/11 04:29:30 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/15 05:08:31 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,11 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (ft_norminette25(t, g, c));
 }
-/*int main()
+
+#include<stdio.h>
+int main()
 {
-    char **b = ft_split("split  ||this|for|me|||||!|", '|');
+    char **b = ft_split("a b c d e f g h i j k ", ' ');
     int i;
     i = 0;
     while (b[i])
@@ -104,4 +106,4 @@ char	**ft_split(char const *s, char c)
         printf("%s\n", b[i]);
         i++;
 	}
-}*/
+}

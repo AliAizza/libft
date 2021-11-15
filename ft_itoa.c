@@ -6,13 +6,13 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 09:32:42 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/13 20:19:57 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/14 18:12:30 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_convert(long int nb, int size, int sign)
+static char	*ft_convert(long int nb, int size, int sign)
 {
 	char	*a;
 

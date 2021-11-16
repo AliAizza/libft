@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:39:14 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/15 20:32:44 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/16 22:19:13 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *str, int c)
 	i = ft_strlen(new);
 	while (i >= 0)
 	{
-		if (new[i] == (unsigned char)c)
+		if (new[i] == (char)c)
 			return (&new[i]);
 		i--;
 	}

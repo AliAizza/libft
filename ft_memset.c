@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:34:50 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/14 17:10:47 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/16 21:58:21 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		new[i] = c;
+		new[i] = (unsigned char)c;
 		i++;
 	}
 	return (new);

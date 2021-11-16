@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 21:31:15 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/13 22:27:43 by aaizza           ###   ########.fr       */
+/*   Created: 2021/11/16 17:14:28 by aaizza            #+#    #+#             */
+/*   Updated: 2021/11/16 17:14:30 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (*lst && new)
+	if (lst && del)
 	{
-		new->next = *lst;
-		*lst = new;
+		del(lst->content);
+		free(lst);
 	}
-	else
-		*lst = new;
 }
 
-/*int main()
+/*void ft_del(void *a)
 {
-	t_list *a = ft_lstnew("1");
-	a->next = ft_lstnew("2");
-	ft_lstadd_front(&a, ft_lstnew("0"));
-	ft_lstadd_front(&a, ft_lstnew("-1"));
-	while(a)
-	{
-		printf("%s", a->content);
-		a = a->next;
-	}
+	int *i;
+	i = (int *)a;
+	*i = 0;
+}
+
+#include <stdio.h>
+int main()
+{
+	int b = 99;
+	t_list *a = ft_lstnew(&b);
+	printf ("%d\n", *(int *)a->content);
+	ft_lstdelone(a, ft_del);
+	printf ("%d", *(int *)a->content);
 }*/

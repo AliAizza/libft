@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 21:13:18 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/13 22:28:28 by aaizza           ###   ########.fr       */
+/*   Created: 2021/11/16 17:15:06 by aaizza            #+#    #+#             */
+/*   Updated: 2021/11/16 17:15:49 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
 
-t_list	*ft_lstnew(void *content)
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*new;
+	int	count;
 
-	new = malloc (sizeof(t_list));
-	if (!new)
-		return (0);
-	new->content = content;
-	new->next = 0;
-	return (new);
+	count = 0;
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
 }
 
 /*int main()
 {
-	printf("%s", ft_lstnew("test")->content);
+	t_list *a = ft_lstnew("1");
+	a->next = ft_lstnew("2");
+	ft_lstadd_front(&a, ft_lstnew("0"));
+	ft_lstadd_front(&a, ft_lstnew("-1"));
+	printf("%d", ft_lstsize(a));
 }*/

@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 21:51:46 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/13 20:19:50 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/16 15:08:59 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,25 @@
 
 int	ft_atoi(const char *str)
 {
-	char	*strr;
 	int		sign;
 	int		res;
 	int		i;
 
-	strr = (char *)str;
 	sign = 1;
 	res = 0;
 	i = 0;
-	while (strr[i] == 32 || (strr[i] >= 9 && strr[i] <= 13))
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	if (strr[i] == '-' || strr[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (strr[i] == '-')
+		if (str[i] == '-')
 			sign *= -1;
 		i++;
 	}
-	while (strr[i] && strr[i] >= '0' && strr[i] <= '9')
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
-		res = (res * 10) + (strr[i] - 48);
+		res = (res * 10) + (str[i] - 48);
 		i++;
 	}
 	return (res * sign);
 }
-
-/*int main()
-{
-	char a[] = "1337";
-	printf("%d", ft_atoi(a));
-}*/

@@ -6,7 +6,7 @@
 #    By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/07 10:07:42 by aaizza            #+#    #+#              #
-#    Updated: 2021/11/16 17:40:34 by aaizza           ###   ########.fr        #
+#    Updated: 2021/11/16 21:03:04 by aaizza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,9 +36,7 @@ ${NAME}:
 			${CC} ${FLAGS} -c ${SRC}
 			ar -rc ${NAME} ${OBJS}
 
-bonus:		${OBJS_BONUS}
-
-${OBJS_BONUS}:
+bonus:
 			${CC} ${FLAGS} -c ${BONUS}
 			ar -rc ${NAME} ${OBJS_BONUS}
 

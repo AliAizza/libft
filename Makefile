@@ -6,7 +6,7 @@
 #    By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/07 10:07:42 by aaizza            #+#    #+#              #
-#    Updated: 2021/11/16 17:12:31 by aaizza           ###   ########.fr        #
+#    Updated: 2021/11/16 17:40:34 by aaizza           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,6 @@ ft_lstnew_bonus.c ft_lstsize_bonus.c
 OBJS = ${SRC:.c=.o}
 
 OBJS_BONUS = ${BONUS:.c=.o}
-
-HEADER = libft.h
 
 CC = gcc
 

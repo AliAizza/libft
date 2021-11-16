@@ -6,12 +6,11 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 18:50:16 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/16 21:15:55 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/16 21:49:19 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include <fcntl.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

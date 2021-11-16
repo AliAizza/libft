@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:14:13 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/16 17:14:18 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/16 21:30:50 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (*lst && new)
+	if (*lst)
 	{
 		new->next = *lst;
 		*lst = new;

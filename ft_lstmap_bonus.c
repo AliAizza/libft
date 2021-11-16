@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:14:52 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/16 21:17:09 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/16 21:44:16 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			a = ft_lstnew(f(lst->content));
 			if (!a)
 			{
-				ft_lstclear(&a, del);
+				ft_lstclear(&first, del);
 				return (0);
 			}
 			ft_lstadd_back(&first, a);

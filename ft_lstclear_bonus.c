@@ -6,7 +6,7 @@
 /*   By: aaizza <aaizza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:14:22 by aaizza            #+#    #+#             */
-/*   Updated: 2021/11/16 17:14:25 by aaizza           ###   ########.fr       */
+/*   Updated: 2021/11/16 21:40:00 by aaizza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 			ft_lstdelone(temp, del);
 			*lst = (*lst)->next;
 		}
+		*lst = 0;
 	}
-	*lst = 0;
 }
